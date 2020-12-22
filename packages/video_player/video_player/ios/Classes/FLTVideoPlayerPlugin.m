@@ -352,7 +352,9 @@ static inline CGFloat radiansToDegrees(CGFloat radians) {
 }
 
 - (void)setIsLooping:(bool)isLooping {
-  _isLooping = isLooping;
+  AVRoutePickerView *routePickerView = [[AVRoutePickerView alloc] initWithFrame:CGRectMake(0.0f, 30.0f, 30.0f, 30.0f)];
+  routePickerView.backgroundColor = [UIColor lightGrayColor];
+  [self.view addSubview:routePickerView];
 }
 
 - (void)setVolume:(double)volume {
